@@ -131,8 +131,8 @@ public class SQLiteConnectionManager {
 
         try (Connection conn = DriverManager.getConnection(databaseURL);
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
-                    pstmt.setInt(1, id); //bind 'id' to first placeholder
-                    pstmt.setString(2, word); //bind 'word' to second place holder'
+                    pstmt.setInt(1, id); //bind 'id' to first ?
+                    pstmt.setString(2, word); //bind 'word' to the second ?
 
             pstmt.executeUpdate();
         } catch (SQLException e) {
